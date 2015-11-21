@@ -1,0 +1,6 @@
+function gitinit {
+  PROJECT="${PWD##*/}"
+  AUTHOR="pegurnee"
+  LICENSE="E-MIT"
+  cat ~/_init/README.md | sed -e "s/{AUTHOR}/$AUTHOR/g" -e "s/{PROJECT}/$PROJECT/g" -e "s/{LICENSE}/$LICENSE/g" > README.md
+}
